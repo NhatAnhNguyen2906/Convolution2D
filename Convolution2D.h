@@ -1,0 +1,19 @@
+#ifndef CONVOLUTION2D_H
+#define CONVOLUTION2D_H
+
+#define INPUT_HEIGHT 5
+#define INPUT_WIDTH 5
+#define KERNEL_HEIGHT 3
+#define KERNEL_WIDTH 3
+#define OUTPUT_HEIGHT (INPUT_HEIGHT - KERNEL_HEIGHT + 1)
+#define OUTPUT_WIDTH (INPUT_WIDTH - KERNEL_WIDTH + 1)
+
+void Convolution2D
+(
+	const double input[INPUT_HEIGHT][INPUT_WIDTH],
+	const double kernel[KERNEL_HEIGHT][KERNEL_WIDTH],
+	double output[OUTPUT_HEIGHT][OUTPUT_WIDTH]
+);
+
+#endif
+
