@@ -1,0 +1,11 @@
+vhdl xil_defaultlib "ip/xil_defaultlib/Convolution2D_ap_dadd_3_full_dsp_64.vhd"
+vhdl xil_defaultlib "ip/xil_defaultlib/Convolution2D_ap_dmul_4_max_dsp_64.vhd"
+sv work "glbl.v"
+sv xil_defaultlib "AESL_automem_input_r.v"
+sv xil_defaultlib "AESL_automem_kernel.v"
+sv xil_defaultlib "AESL_automem_output_r.v"
+sv xil_defaultlib "Convolution2D.autotb.v"
+sv xil_defaultlib "Convolution2D.v"
+sv xil_defaultlib "Convolution2D_dadbkb.v"
+sv xil_defaultlib "Convolution2D_dmucud.v"
+
