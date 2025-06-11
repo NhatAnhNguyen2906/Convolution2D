@@ -1,12 +1,15 @@
 INFO: [HLS 200-10] Running 'D:/Vitis_2018/Vivado/2018.3/bin/unwrapped/win64.o/vivado_hls.exe'
-INFO: [HLS 200-10] For user 'lenovo' on host 'desktop-47e0fuo' (Windows NT_amd64 version 6.2) on Sat May 03 15:55:42 +0700 2025
+INFO: [HLS 200-10] For user 'lenovo' on host 'desktop-47e0fuo' (Windows NT_amd64 version 6.2) on Fri Jun 06 08:52:11 +0700 2025
 INFO: [HLS 200-10] In directory 'C:/Users/lenovo/Convolution2D'
 INFO: [HLS 200-10] Opening project 'C:/Users/lenovo/Convolution2D/Convolution2D'.
-INFO: [HLS 200-10] Opening solution 'C:/Users/lenovo/Convolution2D/Convolution2D/solution1'.
+INFO: [HLS 200-10] Opening solution 'C:/Users/lenovo/Convolution2D/Convolution2D/pipeline_interface_solution'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
 INFO: [COSIM 212-47] Using XSIM for RTL simulation.
 INFO: [COSIM 212-14] Instrumenting C test bench ...
+WARNING: [COSIM 212-369] AXI_master port 'input' has a depth of '25'. Insufficient depth may result in simulation mismatch or freeze.
+WARNING: [COSIM 212-369] AXI_master port 'kernel' has a depth of '9'. Insufficient depth may result in simulation mismatch or freeze.
+WARNING: [COSIM 212-369] AXI_master port 'output' has a depth of '9'. Insufficient depth may result in simulation mismatch or freeze.
    Build using "D:/Vitis_2018/Vivado/2018.3/msys64/mingw64/bin/g++"
    Compiling Convolution2D_tb.cpp_pre.cpp.tb.cpp
    Compiling Convolution2D.cpp_pre.cpp.tb.cpp
@@ -19,34 +22,44 @@ INFO: [COSIM 212-12] Generating RTL test bench ...
 INFO: [COSIM 212-323] Starting verilog simulation. 
 INFO: [COSIM 212-15] Starting XSIM ...
 
-C:\Users\lenovo\Convolution2D\Convolution2D\solution1\sim\verilog>set PATH= 
+C:\Users\lenovo\Convolution2D\Convolution2D\pipeline_interface_solution\sim\verilog>set PATH= 
 
-C:\Users\lenovo\Convolution2D\Convolution2D\solution1\sim\verilog>call D:/Vitis_2018/Vivado/2018.3/bin/xelab xil_defaultlib.apatb_Convolution2D_top glbl -prj Convolution2D.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile "D:/Vitis_2018/Vivado/2018.3/data/xsim/ip/xsim_ip.ini" --lib "ieee_proposed=./ieee_proposed" -s Convolution2D -debug wave 
+C:\Users\lenovo\Convolution2D\Convolution2D\pipeline_interface_solution\sim\verilog>call D:/Vitis_2018/Vivado/2018.3/bin/xelab xil_defaultlib.apatb_Convolution2D_top glbl -prj Convolution2D.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile "D:/Vitis_2018/Vivado/2018.3/data/xsim/ip/xsim_ip.ini" --lib "ieee_proposed=./ieee_proposed" -s Convolution2D -debug wave 
 INFO: [XSIM 43-3496] Using init file passed via -initfile option "D:/Vitis_2018/Vivado/2018.3/data/xsim/ip/xsim_ip.ini".
 Vivado Simulator 2018.3
 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
 Running: D:/Vitis_2018/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_Convolution2D_top glbl -prj Convolution2D.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile D:/Vitis_2018/Vivado/2018.3/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s Convolution2D -debug wave 
 Multi-threading is on. Using 10 slave threads.
 Determining compilation order of HDL files.
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/lenovo/Convolution2D/Convolution2D/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/lenovo/Convolution2D/Convolution2D/pipeline_interface_solution/sim/verilog/glbl.v" into library work
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/lenovo/Convolution2D/Convolution2D/solution1/sim/verilog/AESL_automem_input_r.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_input_r
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/lenovo/Convolution2D/Convolution2D/solution1/sim/verilog/AESL_automem_kernel.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_kernel
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/lenovo/Convolution2D/Convolution2D/solution1/sim/verilog/AESL_automem_output_r.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_output_r
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/lenovo/Convolution2D/Convolution2D/solution1/sim/verilog/Convolution2D.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/lenovo/Convolution2D/Convolution2D/pipeline_interface_solution/sim/verilog/AESL_axi_master_gmem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_master_gmem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/lenovo/Convolution2D/Convolution2D/pipeline_interface_solution/sim/verilog/AESL_axi_slave_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_slave_ctrl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/lenovo/Convolution2D/Convolution2D/pipeline_interface_solution/sim/verilog/Convolution2D.autotb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module apatb_Convolution2D_top
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/lenovo/Convolution2D/Convolution2D/solution1/sim/verilog/Convolution2D.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/lenovo/Convolution2D/Convolution2D/pipeline_interface_solution/sim/verilog/Convolution2D.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Convolution2D
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/lenovo/Convolution2D/Convolution2D/solution1/sim/verilog/Convolution2D_dadbkb.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/lenovo/Convolution2D/Convolution2D/pipeline_interface_solution/sim/verilog/Convolution2D_ctrl_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Convolution2D_ctrl_s_axi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/lenovo/Convolution2D/Convolution2D/pipeline_interface_solution/sim/verilog/Convolution2D_dadbkb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Convolution2D_dadbkb
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/lenovo/Convolution2D/Convolution2D/solution1/sim/verilog/Convolution2D_dmucud.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/lenovo/Convolution2D/Convolution2D/pipeline_interface_solution/sim/verilog/Convolution2D_dmucud.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Convolution2D_dmucud
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/lenovo/Convolution2D/Convolution2D/solution1/sim/verilog/ip/xil_defaultlib/Convolution2D_ap_dadd_3_full_dsp_64.vhd" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/lenovo/Convolution2D/Convolution2D/pipeline_interface_solution/sim/verilog/Convolution2D_gmem_m_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Convolution2D_gmem_m_axi
+INFO: [VRFC 10-311] analyzing module Convolution2D_gmem_m_axi_reg_slice
+INFO: [VRFC 10-311] analyzing module Convolution2D_gmem_m_axi_fifo
+INFO: [VRFC 10-311] analyzing module Convolution2D_gmem_m_axi_buffer
+INFO: [VRFC 10-311] analyzing module Convolution2D_gmem_m_axi_decoder
+INFO: [VRFC 10-311] analyzing module Convolution2D_gmem_m_axi_throttl
+INFO: [VRFC 10-311] analyzing module Convolution2D_gmem_m_axi_read
+INFO: [VRFC 10-311] analyzing module Convolution2D_gmem_m_axi_write
+INFO: [VRFC 10-2458] undeclared symbol data_valid, assumed default net type wire [C:/Users/lenovo/Convolution2D/Convolution2D/pipeline_interface_solution/sim/verilog/Convolution2D_gmem_m_axi.v:2241]
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/lenovo/Convolution2D/Convolution2D/pipeline_interface_solution/sim/verilog/ip/xil_defaultlib/Convolution2D_ap_dadd_3_full_dsp_64.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'Convolution2D_ap_dadd_3_full_dsp_64'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/lenovo/Convolution2D/Convolution2D/solution1/sim/verilog/ip/xil_defaultlib/Convolution2D_ap_dmul_4_max_dsp_64.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/lenovo/Convolution2D/Convolution2D/pipeline_interface_solution/sim/verilog/ip/xil_defaultlib/Convolution2D_ap_dmul_4_max_dsp_64.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'Convolution2D_ap_dmul_4_max_dsp_64'
 Starting static elaboration
 WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:90373]
@@ -100,6 +113,19 @@ Compiling package unisim.vcomponents
 Compiling package ieee.vital_timing
 Compiling package ieee.vital_primitives
 Compiling package unisim.vpkg
+Compiling module xil_defaultlib.Convolution2D_ctrl_s_axi
+Compiling module xil_defaultlib.Convolution2D_gmem_m_axi_throttl...
+Compiling module xil_defaultlib.Convolution2D_gmem_m_axi_reg_sli...
+Compiling module xil_defaultlib.Convolution2D_gmem_m_axi_fifo(DA...
+Compiling module xil_defaultlib.Convolution2D_gmem_m_axi_buffer(...
+Compiling module xil_defaultlib.Convolution2D_gmem_m_axi_fifo(DE...
+Compiling module xil_defaultlib.Convolution2D_gmem_m_axi_fifo(DA...
+Compiling module xil_defaultlib.Convolution2D_gmem_m_axi_fifo(DA...
+Compiling module xil_defaultlib.Convolution2D_gmem_m_axi_write(N...
+Compiling module xil_defaultlib.Convolution2D_gmem_m_axi_buffer(...
+Compiling module xil_defaultlib.Convolution2D_gmem_m_axi_reg_sli...
+Compiling module xil_defaultlib.Convolution2D_gmem_m_axi_read(NU...
+Compiling module xil_defaultlib.Convolution2D_gmem_m_axi(NUM_REA...
 Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
 Compiling architecture rtl of entity floating_point_v7_1_7.delay [\delay(width=52)\]
 Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
@@ -291,9 +317,8 @@ Compiling architecture xilinx of entity floating_point_v7_1_7.floating_point_v7_
 Compiling architecture convolution2d_ap_dmul_4_max_dsp_64_arch of entity xil_defaultlib.Convolution2D_ap_dmul_4_max_dsp_64 [convolution2d_ap_dmul_4_max_dsp_...]
 Compiling module xil_defaultlib.Convolution2D_dmucud(ID=1)
 Compiling module xil_defaultlib.Convolution2D
-Compiling module xil_defaultlib.AESL_automem_input_r
-Compiling module xil_defaultlib.AESL_automem_kernel
-Compiling module xil_defaultlib.AESL_automem_output_r
+Compiling module xil_defaultlib.AESL_axi_master_gmem
+Compiling module xil_defaultlib.AESL_axi_slave_ctrl
 Compiling module xil_defaultlib.apatb_Convolution2D_top
 Compiling module work.glbl
 Built simulation snapshot Convolution2D
@@ -303,8 +328,8 @@ Built simulation snapshot Convolution2D
   **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
-source C:/Users/lenovo/Convolution2D/Convolution2D/solution1/sim/verilog/xsim.dir/Convolution2D/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Sat May  3 15:57:43 2025...
+source C:/Users/lenovo/Convolution2D/Convolution2D/pipeline_interface_solution/sim/verilog/xsim.dir/Convolution2D/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Jun  6 08:54:00 2025...
 
 ****** xsim v2018.3 (64-bit)
   **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
@@ -312,3 +337,8 @@ INFO: [Common 17-206] Exiting Webtalk at Sat May  3 15:57:43 2025...
     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
 start_gui
+INFO: [Common 17-206] Exiting xsim at Fri Jun  6 16:15:23 2025...
+INFO: [COSIM 212-316] Starting C post checking ...
+Test passed
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
