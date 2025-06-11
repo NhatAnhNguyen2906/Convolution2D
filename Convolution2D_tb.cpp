@@ -3,7 +3,7 @@
 #include <fstream>
 #include <cmath>
 using namespace std;
-// readMatrix function from txt file, fill 0
+
 void readMatrix(double matrix[], int height, int width, ifstream& file)
 {
     for(int i = 0; i < height * width; i++)

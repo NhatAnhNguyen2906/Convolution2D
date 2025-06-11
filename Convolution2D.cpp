@@ -5,10 +5,19 @@ void Convolution2D(
 	const double kernel[KERNEL_HEIGHT][KERNEL_WIDTH],
 	double output[OUTPUT_HEIGHT][OUTPUT_WIDTH]
 ) {
+
+
+	#pragma HLS INTERFACE m_axi port=input offset=slave bundle=gmem
+    #pragma HLS INTERFACE m_axi port=kernel offset=slave bundle=gmem
+    #pragma HLS INTERFACE m_axi port=output offset=slave bundle=gmem
+    #pragma HLS INTERFACE s_axilite port=return bundle=ctrl
+
 	for(int i = 0; i < OUTPUT_HEIGHT; i++)
 	{
+
 		for(int j = 0; j < OUTPUT_WIDTH; j++)
 		{
+#pragma HLS PIPELINE
 			double sum = 0.0;
 			for(int m = 0; m < KERNEL_HEIGHT; m++)
 			{
@@ -21,3 +30,4 @@ void Convolution2D(
 		}
 	}
 }
+
